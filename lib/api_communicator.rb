@@ -10,6 +10,7 @@ def get_character_movies_from_api(character_name)
   results = response_hash["results"]
   character_films_urls = []
   characters_films = []
+  
   results.each do |character_hash|
     if character_hash["name"].downcase == character_name
       character_films_urls << character_hash["films"]
